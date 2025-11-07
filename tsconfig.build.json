@@ -4,10 +4,8 @@
     "rootDir": ".",
     "outDir": "./dist",
     "removeComments": true,
-    "sourceMap": false,
-    "incremental": true,
-    "tsBuildInfoFile": "./dist/tsconfig.tsbuildinfo"
+    "sourceMap": false
   },
   "include": ["packages/*/src/**/*"],
-  "exclude": ["packages-private/*", "**/dist", "**/*.test.ts", "**/*.spec.ts"]
+  "exclude": ["**/dist", "**/*.test.ts", "**/*.spec.ts"]
 }
