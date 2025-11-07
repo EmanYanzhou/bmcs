@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "./dist",
+    "removeComments": true,
+    "sourceMap": false,
+    "incremental": true,
+    "tsBuildInfoFile": "./dist/tsconfig.tsbuildinfo"
+  },
+  "include": ["packages/*/src/**/*"],
+  "exclude": ["packages-private/*", "**/dist", "**/*.test.ts", "**/*.spec.ts"]
+}

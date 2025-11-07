@@ -1,0 +1,47 @@
+{
+  "private": true,
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.18.3",
+  "scripts": {
+    "build": "tsc -b",
+    "build:core": "pnpm --filter @bmcs/core run build",
+    "build:all": "pnpm -r --filter ./packages/* run build",
+    "build-to-root": "tsc --build tsconfig.build.json",
+    "dev": "tsc -b --watch",
+    "dev:core": "pnpm --filter @bmcs/core run build:dev:watch",
+    "dev:all": "pnpm -r --filter ./packages/* run build:dev:watch",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier -w .",
+    "format:check": "prettier -c .",
+    "clean": "rimraf dist dist-dev",
+    "commit": "git-cz",
+    "prepare": "husky"
+  },
+  "engines": {
+    "node": ">=20.20.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "@eslint/js": "^9.39.1",
+    "@types/node": "^24.9.2",
+    "commitizen": "^4.3.1",
+    "cz-git": "^1.12.0",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-vue": "^10.5.1",
+    "globals": "^16.5.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.6.2",
+    "rimraf": "^6.1.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-git"
+    }
+  }
+}
