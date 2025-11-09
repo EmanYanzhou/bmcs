@@ -15,8 +15,10 @@
     "format": "prettier -w .",
     "format:check": "prettier -c .",
     "clean": "rimraf dist dist-dev",
-    "commit": "git-cz",
-    "prepare": "husky"
+    "test": "vitest run -c vitest.config.ts",
+    "test:core": "vitest run -c packages\\core\\__tests__\\vitest.config.ts",
+    "test:cove:core": "vitest run -c packages\\core\\__tests__\\vitest.config.ts --coverage",
+    "commit": "git-cz"
   },
   "engines": {
     "node": ">=20.20.0"
@@ -26,6 +28,7 @@
     "@commitlint/config-conventional": "^20.0.0",
     "@eslint/js": "^9.39.1",
     "@types/node": "^24.9.2",
+    "@vitest/coverage-v8": "^4.0.8",
     "commitizen": "^4.3.1",
     "cz-git": "^1.12.0",
     "eslint": "^9.39.1",
@@ -37,7 +40,8 @@
     "prettier": "^3.6.2",
     "rimraf": "^6.1.0",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.46.3"
+    "typescript-eslint": "^8.46.3",
+    "vitest": "^4.0.8"
   },
   "config": {
     "commitizen": {

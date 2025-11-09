@@ -3,3 +3,4 @@ dist/
 dist-dev/
 packages/*/dist/
 packages/*/dist-dev/
+packages/*/__tests__/coverage/
