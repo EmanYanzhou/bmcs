@@ -11,7 +11,7 @@ export default defineConfig({
       subject: '简短的变更描述：',
       body: '详细的变更描述：',
       breaking: '破坏性变更：',
-      footer: '关联关闭的：',
+      footer: '关联的 Issue ：',
       footerPrefixSelect: '选择关联的 Issue 前缀：',
       customFooterPrefix: '输入自定义 Issue 前缀：',
       confirmCommit: '确认以上提交信息？',
